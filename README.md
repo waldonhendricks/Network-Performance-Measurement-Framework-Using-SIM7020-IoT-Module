@@ -222,3 +222,49 @@ def log_data(filename, data):
 ## Modular Design and Documentation
 ### CSQ and EDRX Deep Sleep Logging (csq-edrx-deepslp.py)
 This script logs Cellular Signal Quality (CSQ) values and explores Extended Discontinuous Reception (eDRX) and deep sleep mode impacts.
+```python
+import serial
+import time
+import datetime
+import csv
+import re
+
+# Serial port configuration
+SERIAL_PORT = '/dev/ttyS0'
+BAUD_RATE = 115200
+TIMEOUT = 1
+
+# Initialize serial connection
+ser = serial.Serial(SERIAL_PORT, BAUD_RATE, timeout=TIMEOUT)
+
+def send_at_command(command, delay=2):
+    ser.write((command + '\r\n').encode())
+    time.sleep(delay)
+    response = ser.read(ser.in_waiting).decode()
+    return response.strip()
+
+def log_csq(log_file):
+    timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    csq_response = send_at_command('AT+CSQ')
+    csq_match = re.search(r'\+CSQ: (\d+),(\d+)', csq_response)
+    csq = csq_match.group(1) if csq_match else 'N/A'
+    print(f"Timestamp: {timestamp}, CSQ: {csq}")
+    with open(log_file, 'a', newline='') as file:
+        csv_writer = csv.writer(file)
+        csv_writer.writerow([timestamp, csq])
+
+log_file_path = 'csq_log.csv'
+with open(log_file_path, 'w', newline='') as file:
+    csv_writer = csv.writer(file)
+    csv_writer.writerow(['Timestamp', 'CSQ'])
+
+try:
+    while True:
+        log_csq(log_file_path)
+        time.sleep(164)
+except KeyboardInterrupt:
+    print("CSQ logging stopped by user.")
+finally:
+    ser.close()
+```
+
