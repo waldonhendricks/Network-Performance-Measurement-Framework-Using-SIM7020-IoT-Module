@@ -43,11 +43,11 @@ The SIM7020 module embodies the ideal combination of efficiency, reliability, an
 - SIM7020 IoT Module
 - Raspberry Pi
   
-p align="center">
+<div style="display: flex; justify-content: center;">
   <img src="/images/NB-IoT-HAT-SIM7020E.png" alt="SIM7020 Module" width="200"/>
   <img src="/images/SIM7020E%20NBIOT-HAT%20Backside.png" alt="Backside of SIM7020E NBIOT-HAT" width="200"/>
   <img src="/images/SIM7020E%20NBIOT-HAT%20Frontside.png" alt="Frontside of SIM7020E NBIOT-HAT" width="200"/>
-</p>
+</div>
 
 ### Software
 
