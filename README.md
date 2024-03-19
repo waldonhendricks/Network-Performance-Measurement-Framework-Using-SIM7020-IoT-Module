@@ -50,19 +50,19 @@ The SIM7020 module embodies the ideal combination of efficiency, reliability, an
 ### NB-IoT HAT SIM7020E - Front View
 
 <p align="center">
-  <img src="/images/SIM7020E NBIOT-HAT frontside.png" width="400" alt="NB-IoT HAT SIM7020E Front View">
+  <img src="/images/SIM7020E NBIOT-HAT frontside.png" width="200" alt="NB-IoT HAT SIM7020E Front View">
 </p>
 
 ### NB-IoT HAT SIM7020E - Back View
 
 <p align="center">
-  <img src="/images/SIM7020E NBIOT-HAT Backside.png" width="400" alt="NB-IoT HAT SIM7020E Back View">
+  <img src="/images/SIM7020E NBIOT-HAT Backside.png" width="200" alt="NB-IoT HAT SIM7020E Back View">
 </p>
 
 ### SIM7020E NB-IoT HAT
 
 <p align="center">
-  <img src="/images/NB-IoT-HAT-SIM7020E .png" width="400" alt="SIM7020E NB-IoT HAT">
+  <img src="/images/NB-IoT-HAT-SIM7020E .png" width="200" alt="SIM7020E NB-IoT HAT">
 </p>
 
 
