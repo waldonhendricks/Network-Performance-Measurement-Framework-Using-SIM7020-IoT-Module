@@ -163,3 +163,58 @@ AT+CSQ
 ```
 
 
+## Step 2: Code Organization
+
+### Modular Design
+
+Structuring your code into functions or modules is essential for maintaining clarity and manageability. Here is an example of how to organize your Python code for sending AT commands, parsing responses, and logging data.
+
+```python
+# at_commands.py
+import serial
+
+def send_at_command(ser, command):
+    """
+    Sends an AT command to the SIM7020 module.
+    
+    Parameters:
+        ser (serial.Serial): The serial connection to the SIM7020.
+        command (str): The AT command to send.
+    
+    Returns:
+        str: The response from the SIM7020 module.
+    """
+    ser.write((command + '\r\n').encode())
+    response = ser.read_until().decode().strip()
+    return response
+
+def parse_response(response):
+    """
+    Parses a response from the SIM7020 module to extract relevant data.
+    
+    Parameters:
+        response (str): The response string from the SIM7020 module.
+    
+    Returns:
+        dict: A dictionary containing parsed values.
+    """
+    # Implementation depends on the expected response format
+    parsed_data = {}
+    # Example parsing logic here
+    return parsed_data
+
+# logger.py
+import csv
+
+def log_data(filename, data):
+    """
+    Logs data to a CSV file.
+    
+    Parameters:
+        filename (str): The name of the CSV file.
+        data (dict): The data to log.
+    """
+    with open(filename, 'a', newline='') as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=data.keys())
+        writer.writerow(data)
+
