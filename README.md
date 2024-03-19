@@ -14,7 +14,6 @@ Understanding network performance is **crucial** in IoT deployments.
 ### Why SIM7020?
 
 The SIM7020 is chosen for its balance between *power efficiency* and connectivity.
-# Overview of the SIM7020 NB-IoT Module
 
 <img src="/images/NBIOT-SIM7020E%20Module.png" alt="SIM7020 Module" width="200"/>
 
@@ -43,11 +42,22 @@ The SIM7020 module embodies the ideal combination of efficiency, reliability, an
 - SIM7020 IoT Module
 - Raspberry Pi
   
-<div style="display: flex; justify-content: center;">
-  <img src="/images/NB-IoT-HAT-SIM7020E.png" alt="SIM7020 Module" width="200"/>
-  <img src="/images/SIM7020E%20NBIOT-HAT%20Backside.png" alt="Backside of SIM7020E NBIOT-HAT" width="200"/>
-  <img src="/images/SIM7020E%20NBIOT-HAT%20Frontside.png" alt="Frontside of SIM7020E NBIOT-HAT" width="200"/>
-</div>
+# Overview of the SIM7020 NB-IoT HAT
+
+## SIM7020 NBIOT-HAT
+![SIM7020 Module](/images/NB-IoT-HAT-SIM7020E.png)
+The SIM7020 is a versatile Multi-Band NB-IoT module solution presented in an SMT (Surface Mount Technology) type. It is designed to cater to a wide range of IoT applications by offering robust extension capabilities through its rich interface options, including UART, GPIO, and more. This ensures considerable flexibility and ease of integration for customers' applications.
+
+## Backside of SIM7020E NBIOT-HAT
+![Backside of SIM7020E NBIOT-HAT](/images/SIM7020E%20NBIOT-HAT%20Backside.png)
+This image shows the backside of the SIM7020E NBIOT-HAT.
+
+## Frontside of SIM7020E NBIOT-HAT
+![Frontside of SIM7020E NBIOT-HAT](/images/SIM7020E%20NBIOT-HAT%20Frontside.png)
+This image shows the frontside of the SIM7020E NBIOT-HAT.
+
+The SIM7020 module embodies the ideal combination of efficiency, reliability, and cost-effectiveness, making it a preferred choice for developing future-proof IoT solutions.
+
 
 ### Software
 
