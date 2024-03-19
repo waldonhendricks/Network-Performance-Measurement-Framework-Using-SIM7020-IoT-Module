@@ -16,6 +16,8 @@ Understanding network performance is **crucial** in IoT deployments.
 The SIM7020 is chosen for its balance between *power efficiency* and connectivity.
 # Overview of the SIM7020 NB-IoT Module
 
+![SIM7020 Module](/images/NBIOT-SIM7020E Module.png)
+
 The SIM7020 is a versatile Multi-Band NB-IoT module solution presented in an SMT (Surface Mount Technology) type. It is designed to cater to a wide range of IoT applications by offering robust extension capabilities through its rich interface options, including UART, GPIO, and more. This ensures considerable flexibility and ease of integration for customers' applications.
 
 ## Key Features
