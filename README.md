@@ -85,9 +85,9 @@ The CSV format makes it easy to import these logs into analysis tools like Pytho
 
 PySerial is required for serial communication with the SIM7020 module. Install it using pip:
 
-\`\`\`bash
+```bash
 pip install pyserial
-\`\`\`
+```
 
 Configuration Details
 SIM7020 Module Configuration
