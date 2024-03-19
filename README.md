@@ -85,22 +85,34 @@ The CSV format makes it easy to import these logs into analysis tools like Pytho
 
 PySerial is required for serial communication with the SIM7020 module. Install it using pip:
 
-```bash
+\`\`\`bash
 pip install pyserial
+\`\`\`
 
 Configuration Details
 SIM7020 Module Configuration
-Network Registration:
-Use the AT+CREG? command to check network registration status. Make sure the SIM7020 module is registered with the network before proceeding with further configurations.
+### Network Registration:
 
-```bash
-AT
+To check the network registration status, use the `AT+CREG?` command:
+
+\`\`\`bash
 AT+CREG?
+\`\`\`
 
-APN Settings:
-Set the correct APN for your network provider using the AT+CGDCONT command. Replace yourapn with your actual APN.
+### APN Settings:
 
-```bash
-AT
-AT+CGDCONT=1
+To set the correct APN for your network provider, use the `AT+CGDCONT` command. Make sure to replace `yourapn` with the actual APN provided by your network operator:
+
+\`\`\`bash
+AT+CGDCONT=1,"IP","yourapn"
+\`\`\`
+
+### Check Signal Quality:
+
+To assess the signal quality, which is crucial for maintaining a stable connection, use the `AT+CSQ` command:
+
+\`\`\`bash
+AT+CSQ
+\`\`\`
+
 
