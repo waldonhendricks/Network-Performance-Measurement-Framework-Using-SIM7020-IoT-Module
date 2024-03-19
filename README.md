@@ -45,7 +45,26 @@ The SIM7020 module embodies the ideal combination of efficiency, reliability, an
 # Overview of the SIM7020 NB-IoT HAT
 
 ## SIM7020 Module
-![SIM7020 Module](/images/NB-IoT-HAT-SIM7020E.png){: width="200px"}
+## SIM7020 NB-IoT Module Images
+
+### NB-IoT HAT SIM7020E - Front View
+
+<p align="center">
+  <img src="/images/SIM7020E NBIOT-HAT frontside.png" width="400" alt="NB-IoT HAT SIM7020E Front View">
+</p>
+
+### NB-IoT HAT SIM7020E - Back View
+
+<p align="center">
+  <img src="/images/SIM7020E NBIOT-HAT Backside.png" width="400" alt="NB-IoT HAT SIM7020E Back View">
+</p>
+
+### SIM7020E NB-IoT HAT
+
+<p align="center">
+  <img src="/images/NB-IoT-HAT-SIM7020E .png" width="400" alt="SIM7020E NB-IoT HAT">
+</p>
+
 
 The SIM7020 is a versatile Multi-Band NB-IoT module solution presented in an SMT (Surface Mount Technology) type. It is designed to cater to a wide range of IoT applications by offering robust extension capabilities through its rich interface options, including UART, GPIO, and more. This ensures considerable flexibility and ease of integration for customers' applications.
 
