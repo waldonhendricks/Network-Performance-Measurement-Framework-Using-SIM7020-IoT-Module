@@ -95,24 +95,24 @@ SIM7020 Module Configuration
 
 To check the network registration status, use the `AT+CREG?` command:
 
-\`\`\`bash
+```bash
 AT+CREG?
-\`\`\`
+```
 
 ### APN Settings:
 
 To set the correct APN for your network provider, use the `AT+CGDCONT` command. Make sure to replace `yourapn` with the actual APN provided by your network operator:
 
-\`\`\`bash
+```bash
 AT+CGDCONT=1,"IP","yourapn"
-\`\`\`
+```
 
 ### Check Signal Quality:
 
 To assess the signal quality, which is crucial for maintaining a stable connection, use the `AT+CSQ` command:
 
-\`\`\`bash
+```bash
 AT+CSQ
-\`\`\`
+```
 
 
