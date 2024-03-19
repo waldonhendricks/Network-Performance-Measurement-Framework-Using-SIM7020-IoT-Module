@@ -92,7 +92,28 @@ To get started with this framework:
 3. Choose the measurement script relevant to your test scenario, and update any necessary parameters (e.g., server addresses, port numbers).
 4. Run the script and review the logged data for analysis.
 
-## Contribution
+## Setup Instructions
+
+### Hardware Setup
+
+1. **Connect the SIM7020 Module**: Connect your SIM7020 IoT module to the Raspberry Pi or your chosen microcontroller using the UART interface. Make sure that the SIM7020 module is correctly seated and secured.
+
+2. **Power Supply**: Connect your power supply to the SIM7020 module according to the module's specifications. Ensure stable power for reliable operations.
+
+3. **Antenna Connection**: Attach the antenna to the SIM7020 module to ensure optimal signal reception.
+
+### Software Setup
+
+1. **Python Installation**: Ensure Python 3.x is installed on your system. You can download it from [python.org](https://www.python.org/downloads/) or install it using your system's package manager.
+
+   ```bash
+   sudo apt update
+   sudo apt install python3
+
+
+
+
+
+   ## Contribution
 
 Contributions to this project are welcome. You can contribute by enhancing existing scripts, adding new features, or providing documentation improvements. Please feel free to submit pull requests or open issues with your suggestions.
-
