@@ -291,19 +291,54 @@ if __name__ == "__main__":
     tcp_latency_test()
 ```
 
-### Signal Information and Quality (ceng.py)
-Extracts detailed cell tower information and signal quality.
+### CSQ and BER Logging (csq-ber.py)
+This script logs Cellular Signal Quality (CSQ) and Bit Error Rate (BER), showcasing a modular approach with dedicated functions for sending AT commands and logging data.
 ```python
 import serial
 import time
 import datetime
 
-# Initialize serial connection and function definitions omitted for brevity
+# Initialize serial connection
+ser = serial.Serial('/dev/ttyS0', 115200, timeout=1)
+ser.flush()
 
-while True:
-    signal_data = get_signal_info()
-    # Data logging omitted for brevity
-    print(f"Logged signal info at {timestamp}")
-    time.sleep(60)
+def send_at_command(command):
+    """Send AT command to SIM7020 module and return response."""
+    ser.write((command + '\r\n').encode())
+    time.sleep(1)  # Allow time for command execution
+    return ser.read(ser.in_waiting).decode()
+
+def get_csq():
+    """Get CSQ value from the module."""
+    response = send_at_command('AT+CSQ')
+    # Parse response omitted for brevity
+    return {'rssi': csq_data[0], 'ber': csq_data[1]}
+
+# Main loop for logging CSQ and BER to a file
+# Code omitted for brevity
+
+```
+```python
+import serial
+import time
+import csv
+import re
+from datetime import datetime
+
+# Configuration for serial connection and target IP for pinging
+# Code setup and function definitions omitted for brevity
+
+def main():
+    """Main function to send ping and log results to CSV."""
+    # Sending ping and logging results
+    # Code omitted for brevity
+
+if __name__ == "__main__":
+    try:
+        main()
+    except KeyboardInterrupt:
+        print("Program interrupted by user.")
+    finally:
+        print("Closing serial port.")
 ```
 
