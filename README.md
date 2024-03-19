@@ -45,7 +45,7 @@ The SIM7020 module embodies the ideal combination of efficiency, reliability, an
 # Overview of the SIM7020 NB-IoT HAT
 
 ## SIM7020 Module
-<img src="/images/NBIOT-SIM7020E%20Module.png" alt="SIM7020 Module" width="200"/>
+![SIM7020 Module](/images/NB-IoT-HAT-SIM7020E.png){: width="200px"}
 <img src="/images/SIM7020E%20NBIOT-HAT%20Backside.png" alt="Backside of SIM7020E NBIOT-HAT" width="200"/>
 <img src="/images/SIM7020E%20NBIOT-HAT%20Frontside.png" alt="Frontside of SIM7020E NBIOT-HAT" width="200"/>
 
