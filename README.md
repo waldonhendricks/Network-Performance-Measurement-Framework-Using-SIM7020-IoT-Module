@@ -117,7 +117,7 @@ PySerial is required for serial communication with the SIM7020 module. Install i
 ```bash
 pip install pyserial
 
-### Configuration Details
+## Configuration Details
 ### SIM7020 Module Configuration
 Network Registration:
 Use the AT+CREG? command to check network registration status.
@@ -126,19 +126,24 @@ Make sure the SIM7020 module is registered with the network before proceeding wi
 ```bash
 AT+CREG?
 
-APN Settings:
+
+## APN Settings:
 Set the correct APN for your network provider using the AT+CGDCONT command. Replace yourapn with your actual APN.
+
 
 ```bash
 AT+CGDCONT=1,"IP","yourapn"
 
-Check Signal Quality:
+
+## Check Signal Quality:
 Check the signal quality using the AT+CSQ command. This step is useful for troubleshooting network issues.
+
 
 ```bash
 AT+CSQ
 
-###Scripts Configuration
+
+## Scripts Configuration
 Serial Port Configuration:
 In the Python scripts, ensure the SERIAL_PORT variable matches the port to which your SIM7020 module is connected. This might be something like /dev/ttyS0 for Raspberry Pi or a COM port on Windows.
 Target IP and Ports:
