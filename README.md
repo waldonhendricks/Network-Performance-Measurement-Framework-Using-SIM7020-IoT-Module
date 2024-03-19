@@ -35,7 +35,7 @@ Due to its performance, security, and flexibility, the SIM7020 module is excepti
 
 The SIM7020 module embodies the ideal combination of efficiency, reliability, and cost-effectiveness, making it a preferred choice for developing future-proof IoT solutions.
 
-## Hardware and Software Requirements
+## Step 1: Hardware and Software Requirements
 
 ### Hardware
 
@@ -266,5 +266,44 @@ except KeyboardInterrupt:
     print("CSQ logging stopped by user.")
 finally:
     ser.close()
+```
+### TCP Latency Test (tcp-client.py)
+This script measures TCP connection latency by sending data to a server and calculates the time taken for the process.
+```python
+import serial
+import time
+import csv
+from datetime import datetime
+
+# Configuration
+SERIAL_PORT = '/dev/ttyS0'
+BAUD_RATE = 115200
+SERVER_IP = '192.168.43.176'
+SERVER_PORT = '81'
+MESSAGE = 'Hello Server'
+
+def tcp_latency_test():
+    with serial.Serial(SERIAL_PORT, BAUD_RATE, timeout=10) as ser:
+        # Setup and send data omitted for brevity
+        print(f"Logged latency: {latency}ms")
+
+if __name__ == "__main__":
+    tcp_latency_test()
+```
+
+### Signal Information and Quality (ceng.py)
+Extracts detailed cell tower information and signal quality.
+```python
+import serial
+import time
+import datetime
+
+# Initialize serial connection and function definitions omitted for brevity
+
+while True:
+    signal_data = get_signal_info()
+    # Data logging omitted for brevity
+    print(f"Logged signal info at {timestamp}")
+    time.sleep(60)
 ```
 
