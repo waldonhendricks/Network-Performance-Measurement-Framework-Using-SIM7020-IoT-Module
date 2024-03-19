@@ -217,7 +217,7 @@ def log_data(filename, data):
     with open(filename, 'a', newline='') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=data.keys())
         writer.writerow(data)
-"""
+```
 
 ## Modular Design and Documentation
 ### CSQ and EDRX Deep Sleep Logging (csq-edrx-deepslp.py)
