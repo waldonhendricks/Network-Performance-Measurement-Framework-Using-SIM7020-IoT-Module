@@ -217,4 +217,8 @@ def log_data(filename, data):
     with open(filename, 'a', newline='') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=data.keys())
         writer.writerow(data)
+"""
 
+## Modular Design and Documentation
+### CSQ and EDRX Deep Sleep Logging (csq-edrx-deepslp.py)
+This script logs Cellular Signal Quality (CSQ) values and explores Extended Discontinuous Reception (eDRX) and deep sleep mode impacts.
