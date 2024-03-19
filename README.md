@@ -110,10 +110,43 @@ To get started with this framework:
    sudo apt update
    sudo apt install python3
 
+## Install PySerial
+
+PySerial is required for serial communication with the SIM7020 module. Install it using pip:
+
+```bash
+pip install pyserial
+
+### Configuration Details
+### SIM7020 Module Configuration
+Network Registration:
+Use the AT+CREG? command to check network registration status.
+Make sure the SIM7020 module is registered with the network before proceeding with further configurations.
+
+```bash
+AT+CREG?
+
+APN Settings:
+Set the correct APN for your network provider using the AT+CGDCONT command. Replace yourapn with your actual APN.
+
+```bash
+AT+CGDCONT=1,"IP","yourapn"
+
+Check Signal Quality:
+Check the signal quality using the AT+CSQ command. This step is useful for troubleshooting network issues.
+
+```bash
+AT+CSQ
+
+###Scripts Configuration
+Serial Port Configuration:
+In the Python scripts, ensure the SERIAL_PORT variable matches the port to which your SIM7020 module is connected. This might be something like /dev/ttyS0 for Raspberry Pi or a COM port on Windows.
+Target IP and Ports:
+For scripts performing network tests (e.g., pinglatency.py, tcp-client.py), set the target IP addresses and port numbers according to your test server or service.
+Logging and Data Analysis:
+Ensure that the file paths for logging (e.g., csq_log.csv, ping_latency_log.csv) are correctly set and accessible for write operations by your script.
+By following these setup instructions and configuration details, you'll be well-prepared to run the network performance measurement tests using the SIM7020 module. Adjustments and troubleshooting may be required depending on specific network conditions and hardware configurations.
 
 
-
-
-   ## Contribution
-
+## Contribution
 Contributions to this project are welcome. You can contribute by enhancing existing scripts, adding new features, or providing documentation improvements. Please feel free to submit pull requests or open issues with your suggestions.
